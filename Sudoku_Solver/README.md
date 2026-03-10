@@ -3,51 +3,52 @@
 ## 📌 Overview
 A **Python command-line Sudoku program** that can **generate puzzles** of varying difficulty and **solve them automatically**.  
 
-Designed for **students, Python enthusiasts, and algorithm learners**, it demonstrates **backtracking, recursion, object-oriented thinking, and data visualization** while providing a fully functional puzzle solver and generator.
+This project demonstrates **backtracking, recursion, object-oriented programming, and logical problem-solving** in a structured workflow similar to a data analysis pipeline.
 
 ---
 
-## ⚙️ Features
+## ⚙️ Workflow
 
-- Generate **valid 9x9 Sudoku puzzles**  
-- Solve puzzles automatically using a **backtracking algorithm**  
-- Adjustable **difficulty**: user chooses number of empty cells (20–60)  
-- **Interactive CLI** for input and difficulty selection  
-- **Visualize puzzles** as PNG images (`sudoku.png` and `sudoku_solved.png`)  
-- Clean, modular, **readable Python code** suitable for learning and modification  
-
----
-
-## 🛠️ How It Works
-
-1. **Board Initialization**  
-   - Create an empty 9x9 Sudoku board.
-
-2. **Puzzle Generation (`fill_board`)**  
-   - Fill the board completely using randomized backtracking.  
-   - Remove numbers according to user-selected difficulty to generate a solvable puzzle.
-
-3. **Puzzle Display (`print_board` & `show_board`)**  
-   - Print puzzle to console in readable grid format.  
-   - Optionally save the puzzle as a PNG image using matplotlib.
-
-4. **Puzzle Solving (`solve`)**  
-   - Use **recursive backtracking** to solve the puzzle.  
-   - Display solved board in console and optionally as a PNG (`sudoku_solved.png`).
+### 1️⃣ System Recognition
+**Goal:** Understand the problem domain and requirements.  
+- **Domain:** Puzzle generation and solving (Sudoku 9x9).  
+- **Objective:** Generate solvable puzzles of adjustable difficulty and solve them efficiently.  
+- **Constraints:** Must respect Sudoku rules (unique numbers 1–9 per row, column, and 3x3 block).
 
 ---
 
-## 📊 Process Flow Diagram
-
-A visual representation of the **Sudoku generation and solving workflow**:  
-
-[![Sudoku Flowchart](./images/sudoku_flow.png)](./images/sudoku_flow.png)  
-*Shows steps: board creation → board filling → remove numbers → display → solve → save images.*
+### 2️⃣ Data Collection
+**Goal:** Prepare the inputs for the system.  
+- Gather the initial empty Sudoku board as a 9x9 grid.  
+- Optionally accept **user input** for pre-filled numbers or difficulty selection.  
 
 ---
 
-## 🚀 Usage
+### 3️⃣ Data Cleaning
+**Goal:** Ensure the board is valid and ready for processing.  
+- Verify that initial board numbers (if any) do not violate Sudoku rules.  
+- Fill missing cells during generation while maintaining validity.  
 
-1. Run the script:  
-```bash
-python sudoku_solver_clean.py
+---
+
+### 4️⃣ Exploratory Analysis
+**Goal:** Analyze and process the data for insights.  
+- Randomized backtracking algorithm fills the board completely.  
+- **Check constraints** at every placement to avoid conflicts.  
+- Determine cells to remove based on **difficulty level** (20–60 empty cells).  
+
+---
+
+### 5️⃣ Visualization
+**Goal:** Present the puzzle in a readable and interactive way.  
+- **Console display:** Nicely formatted 9x9 grid.  
+- **Image output:** Save as PNG (`sudoku.png` for puzzle, `sudoku_solved.png` for solution).  
+- Optional enhancements: color-coded cells, bold 3x3 block separators.  
+
+---
+
+### 6️⃣ Insights / Solver Output
+**Goal:** Produce actionable results.  
+- Solve any valid puzzle automatically using **recursive backtracking**.  
+- Output the **solved board** to console and optionally as a PNG image.  
+- Demonstrates efficiency of algorithm and correctness of generation.  
