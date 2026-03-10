@@ -1,56 +1,61 @@
 # 🗂️ Batch CSV & Excel Processor
 
 ## 📌 Overview
-A **Python command-line program** that **automatically cleans, aggregates, and summarizes multiple CSV and Excel datasets**.  
+**Python CLI program** to automatically **clean, aggregate, and summarize multiple CSV and Excel datasets**.  
 
-Designed for **data analysts and business intelligence workflows**, it demonstrates **pandas, OpenPyXL, and automation best practices** while providing a fully functional **batch processor** for real-world datasets.
-
----
-
-## ⚙️ Features
-
-- Automatically process **all CSV and Excel files** in a folder  
-- **Clean data** by removing empty rows/columns and filling missing values  
-- Generate **descriptive statistics** for numeric and categorical data  
-- Save **cleaned datasets** and **summary reports** to an output folder  
-- Modular, reusable **Python functions** for cleaning and summarizing  
-- Supports **large batch processing** with progress tracking  
+Demonstrates **pandas, OpenPyXL, and automation best practices** in a structured workflow suitable for data analysts and business intelligence.
 
 ---
 
-## 🛠️ How It Works
+## ⚙️ Workflow
 
-1. **Configuration**  
-   - Define input and output folders.  
-   - Automatically create the output folder if it doesn't exist.
+### 1️⃣ System Recognition
+- **Domain:** Batch data cleaning and summarization.  
+- **Goal:** Automatically process multiple CSV and Excel files for analysis.  
+- **Constraint:** Support large datasets and maintain data integrity.
 
-2. **Data Cleaning (`clean_data`)**  
-   - Remove fully empty rows and columns.  
-   - Replace remaining missing values with `0`.
+### 2️⃣ Data Collection
+- Input: All `.csv` and `.xlsx` files in a specified folder.  
+- Output folder automatically created if it doesn't exist.
 
-3. **Data Summarization (`summarize_data`)**  
-   - Generate descriptive statistics for numeric and categorical columns.  
-   - Transpose the summary table for readability.
+### 3️⃣ Data Cleaning
+- Remove fully empty rows and columns.  
+- Fill missing values with `0` (or other defaults).  
+- Ensure data consistency for downstream processing.
 
-4. **Batch Processing (`process_files`)**  
-   - Loop through all CSV/XLSX files in the input folder.  
-   - Read, clean, save cleaned data, generate summary, and save summary.  
-   - Log each processed file to the console.
+### 4️⃣ Exploratory Analysis
+- Generate descriptive statistics for numeric and categorical columns.  
+- Summaries are transposed for readability.  
+- Track progress and log processed files.
+
+### 5️⃣ Visualization
+- Optional: Export summaries to Excel/CSV for reporting.  
+- Progress and logs displayed in console.  
+
+### 6️⃣ Insights / Output
+- Cleaned datasets saved to the output folder.  
+- Summary reports saved separately.  
+- Enables **fast insights** across multiple datasets without manual effort.
 
 ---
 
-## 📊 Process Flow Diagram
+## 🚀 Key Features
 
-A visual representation of the **batch data cleaning and summarization workflow**:  
-
-[![Data Pipeline Flowchart](./images/batch_flow.png)](./images/batch_flow.png) 
-*Shows steps from reading files, cleaning, summarizing, and saving results.*
+| Feature | Technique / Concept |
+|---------|-------------------|
+| Batch processing | Automatically loop through CSV/XLSX files |
+| Data cleaning | Remove empty rows/columns, fill missing values |
+| Data summarization | Descriptive statistics for numeric and categorical columns |
+| Export results | Save cleaned data and summaries to output folder |
+| Automation | Modular Python functions, progress logging |
+| Scalable | Supports large batches efficiently |
 
 ---
 
-## 🚀 Usage
+## 🛠️ How to Run
 
 1. Place your `.csv` and `.xlsx` files in the `data` folder.  
-2. Run the script:  
+2. Run the script:
+
 ```bash
 python batch_processor.py
